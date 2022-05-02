@@ -1,0 +1,5 @@
+Shipment Name: Daaru
+Shipment Source: Goa
+Shipment Destination: Dehli
+Shipment Weight: 25
+Shipment is fragile.

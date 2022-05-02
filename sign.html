@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<head>
+<link rel="stylesheet" href="style.css" />
+<title>Login</title>
+</head>
+<body style="background-color: #2778e2c5;">
+<nav>
+    <div class="logo">
+      <img src="cargo.jpg" alt="cargoimage" style="width: 45px; height: 45px" />
+      <h4><a href="index.html">INtime Cargo</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="shipment.html">New Shipment</a>
+      </li>
+      <li>
+        <a href="sign.html">Sign Up</a>
+      </li>
+      <li>
+        <a href="track.html">Track</a>
+      </li>
+      <li>
+        <a href="register.html">Find Work</a>
+      </li>
+    </ul>
+    <div class="rght">
+      <div class='logit'>
+        <form method='post'>
+          <input type='submit' name='logout' value='Logout'/>
+        </form>
+       </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div> 
+  </nav>
+  <div class="validation"><br><br><br>
+    <h2>Login</h2>
+    <form name="acc" id="acc" method="post" action="login.php" class="account">
+      <label for="fname">Username: </label>
+      <input type="text" id="uname" name="uname" required><br><br>
+      <label for="fname">Password: </label>
+      <input type="password" id="pass" name="pass" required><br><br>
+      <input type="checkbox" checked="checked" name="rem" style="width:25px; height:25px; vertical-align: -40%; outline: none;">
+      <label style="width: 168px;">Remember Me</label><br>
+      <input type="submit" id="subm" value="Login">
+    </form>
+  </div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<html>
+    <head>
+      <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      nav {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #1c0a7e;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo {
+  display: flex;
+  margin-left: 10%;
+}
+
+.logo h4 {
+  color: rgb(226, 226, 226);
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 7px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: rgb(226, 226, 226);
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 7px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.burger {
+  display: none;
+  margin-left: 65%;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+@media screen {
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #1c0a7e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .burger {
+    display: block;
+  }
+}
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+    </style>
+    </head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="cargo.jpg" alt="cargoimage" style="width: 45px; height: 45px" />
+      <h4><a href="index.html">INtime Cargo</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="shipment.html">New Shipment</a>
+      </li>
+      <li>
+        <a href="services.html">Services</a>
+      </li>
+      <li>
+        <a href="track.html">Track</a>
+      </li>
+      <li>
+        <a href="register.html">Find Work</a>
+      </li>
+    </ul>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+    <section class="vh-100" style="background-color:#2778e2c5;">
+        <div class="container h-52">
+          <div class="row d-flex justify-content-center pt-3 h-100">
+            <div class="col-xl-9">
+              <h1 class="text-white mb-2">Come Work for Us</h1>
+              <form name="works" method="post" enctype="multipart/form-data" action="uploadfl.php">
+              <div class="card" style="border-radius: 15px;">
+                <div class="card-body">
+                  <div class="row align-items-center pt-3 pb-2">
+                    <div class="col-md-3 ps-5">
+                      <h6 class="mb-0">Full name</h6>
+                    </div>
+                    <div class="col-md-9 pe-5">
+                      <input type="text" class="form-control" name="name" required />
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-2">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Email address</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="email" class="form-control form-control-lg" placeholder="abc@example.com" name="email" required />
+      
+                    </div>
+                  </div>
+
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-2">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">What is your goal in working for us?</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <textarea class="form-control" rows="3" placeholder="Why you choose us?" name="goals" required ></textarea>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-2">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Upload CV</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input class="form-control form-control-lg" id="formFileLg" type="file" name="cvup" required />
+                      <div class="small text-muted mt-2">Upload your CV/Resume or any other relevant file which helps us to know more about you</div>
+      
+                    </div>
+                  </div>
+
+                  <hr class="mx-n3">
+
+                  <div class="row align-items-center py-2">
+                    <div class="col-md-3 ps-5">
+      
+                        <h6 class="mb-0">Choose a position to apply for:</h6>
+        
+                    </div>
+                  <div class="col-md-9 pe-5" >
+                    <select class="form-select" required name="posi" style="text-align:center; display:block; width: 100%; -webkit-appearance: button; -moz-appearance: button; -webkit-user-select: none; -moz-user-select: none; -webkit-padding-end: 20px; -moz-padding-end: 20px; -webkit-padding-start: 6px; -moz-padding-start: 2px; border-radius: 4px; font-size: inherit; margin: 0; overflow: hidden; padding-top: 2px; padding-bottom: 2px; text-overflow: ellipsis; white-space: nowrap;">
+                      <option value="Transport correspondent">Transport correspondent</option>
+                      <option value="Logistics manager">Logistics manager</option>
+                      <option value="Human Resources">Human Resources</option>
+                    </select>
+                    <!-- <button type="button" class="btn btn-primary">Transport correspondent</button>
+                    <button type="button" class="btn btn-primary">Logistics manager</button>
+                    <button type="button" class="btn btn-primary">Human Resources</button> -->
+                  </div>
+                  </div>
+    
+                  <hr class="mx-n3">
+                  <div class="form-check d-flex justify-content-start mb-4 pb-3">
+                    <input class="form-check-input me-3" type="checkbox" value="" id="form2Example3c" required />
+                    <label class="form-check-label" for="form2Example3">
+                      I do accept the <a href="#!" class="text-blue"><u>Terms and Conditions</u></a> of the corporations register policy.
+                    </label>
+                  </div>
+      
+                  <div class="px-5 py-2">
+                    <button type="submit" class="btn btn-primary btn-lg">Send application</button>
+                  </div>
+                </div>
+              </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+  <script src="app.js"></script>
+</body>

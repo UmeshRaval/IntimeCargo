@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #2778e2c5;">
+  <nav>
+    <div class="logo">
+      <img src="cargo.jpg" alt="cargoimage" style="width: 45px; height: 45px" />
+      <h4><a href="index.html">INtime Cargo</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="shipment.html">New Shipment</a>
+      </li>
+      <li>
+        <a href="services.html">Services</a>
+      </li>
+      <li>
+        <a href="track.html">Track</a>
+      </li>
+      <li>
+        <a href="register.html">Find Work</a>
+      </li>
+    </ul>
+    <div class="rght">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+    </div>
+  </nav>
+    <div class="validation"><br><br><br>
+      <h2>Road Cost Estimation</h2><br><br><br>
+        <form name="myform" method="post" action="road.php" class="account" style="background-image: url(roadbk.jpg);">
+          <label for="name" class="label-name">Source </label>
+          <select name="source" id="source">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Dehli">Dehli</option>
+            <option value="Patna">Patna</option>
+            <option value="Kohima">Kohima</option>
+          </select><br><br><br>
+          <label for="name" class="label-name">Destination </label>
+          <select name="dest" id="dest">
+            <option value="Goa">Goa</option>
+            <option value="Pune">Pune</option>
+            <option value="Srinagar">Srinagar</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+          </select><br><br><br>
+          <label for="name" class="label-name">Weight (in kg) </label>
+          <input type="text" class="name" name="weight" required autocomplete="off"><br><br><br>
+        <input type="submit" id="subm" value="Search">
+        </form>
+        <div style='font-size: xx-large; display: flex; width: 85%; margin: auto; align-items: center;'>
+          <a style='margin-top: 5ch; color: white; text-decoration: none; background-color: rgb(50, 138, 0); padding: 14px 20px; border: none; border-radius: 6px;' href='services.html'>Back to services.</a>
+          </div>
+      </div>
+  <script src="app.js"></script>
+</body>
+</html>

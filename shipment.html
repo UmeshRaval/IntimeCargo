@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <title>New shipment</title>
+  <script type="text/javascript">
+    window.onload = init;
+  function init() {
+    var el = document.getElementById("subm");
+    el.addEventListener("mouseover", changeColor);
+    el.addEventListener("mouseout", revertColor);
+  }
+   function changeColor() {
+    document.getElementById("subm").style.color = "red";
+  }
+  function revertColor() {
+    document.getElementById("subm").style.color = "white";
+  }
+  </script>
+</head>
+<body style="background-color: #2778e2c5;">
+  <nav>
+    <div class="logo">
+      <img src="cargo.jpg" alt="cargoimage" style="width: 45px; height: 45px" />
+      <h4><a href="index.html">INtime Cargo</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="shipment.html">New Shipment</a>
+      </li>
+      <li>
+        <a href="services.html">Services</a>
+      </li>
+      <li>
+        <a href="track.html">Track</a>
+      </li>
+      <li>
+        <a href="register.html">Find Work</a>
+      </li>
+    </ul>
+    <div class="rght">
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+  </nav>
+    <div class="validation">
+        <h2>Create new shipment file</h2>
+        <form name="ship" method="post" class="account" action="writefl.php">
+        <label for="fname">Name: </label>
+        <input type="text" name="name" autocomplete="off"><br><br>
+        <label for="fname">From City: </label>
+        <input type="text" name="from" autocomplete="off"><br><br>
+        <label for="fname">To City: </label>
+        <input type="text" name="to" autocomplete="off"><br><br>
+        <label for="fname">Weight of Package: </label>
+        <input type="text" name="weight" autocomplete="off"><br><br>
+        <label for="fname">Volume of Package: </label>
+        <input type="text" name="volume" autocomplete="off"><br><br>
+        <label for="fname">Fragile: </label>
+        <input type="checkbox" name="fragile" autocomplete="off"><br><br>
+        <input type="submit" id="subm" value="Create">
+        </form>
+      </div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+CREATE TABLE `shipments` (
+  `id` int(30) NOT NULL,
+  `source` varchar(30) NOT NULL,
+  `destination` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `shipments` (`id`, `source`, `destination`) VALUES
+(101, 'Mumbai', 'Pune'),
+(102, 'Patna', 'Goa'),
+(103, 'Bangalore', 'Dehli'),
+(104, 'Mumbai', 'Srinagar'),
+(105, 'Kohima', 'Ahmedabad'),
+(106, 'Thiruvananthapuram', 'Chandigarh');

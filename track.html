@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript">
+    window.onload = init;
+  function init() {
+    var el = document.getElementById("subm");
+    el.addEventListener("mouseover", changeColor);
+    el.addEventListener("mouseout", revertColor);
+  }
+   function changeColor() {
+    document.getElementById("subm").style.color = "red";
+  }
+  function revertColor() {
+    document.getElementById("subm").style.color = "white";
+  }
+  </script>
+</head>
+<body style="background-color: #2778e2c5;">
+  <nav>
+    <div class="logo">
+      <img src="cargo.jpg" alt="cargoimage" style="width: 45px; height: 45px" />
+      <h4><a href="index.html">INtime Cargo</a></h4>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="shipment.html">New Shipment</a>
+      </li>
+      <li>
+        <a href="services.html">Services</a>
+      </li>
+      <li>
+        <a href="track.html">Track</a>
+      </li>
+      <li>
+        <a href="register.html">Find Work</a>
+      </li>
+    </ul>
+    <div class="rght">
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </div>
+  </nav>
+    <div class="validation">
+      <h2>Track your shipment</h2>
+        <form name="myform" method="post" action="readdb.php" class="account">
+          <label for="name" class="label-name">Tracking number: </label>
+        <input type="text" class="name" name="id" required autocomplete="off"><br>
+        <input type="submit" id="subm" value="Search">
+        </form>
+      </div>
+  <script src="app.js"></script>
+</body>
+</html>
